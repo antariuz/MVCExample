@@ -1,17 +1,14 @@
 package controller;
 
+import lombok.AllArgsConstructor;
 import model.Scooter;
 import view.View;
 
+@AllArgsConstructor
 public class Controller {
 
-    private Scooter model;
-    private View view;
-
-    public Controller(Scooter model, View view) {
-        this.model = model;
-        this.view = view;
-    }
+    private final Scooter model;
+    private final View view;
 
     public String getScooterID() {
         return model.getId();
